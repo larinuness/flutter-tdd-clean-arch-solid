@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import '../entities/account_entity.dart';
 
@@ -8,14 +7,9 @@ abstract class Authentication {
 
 class AuthenticationParams {
   final String email;
-  final String secret;
+  final String password;
   AuthenticationParams({
     required this.email,
-    required this.secret,
+    required this.password,
   });
-
-  Map<String, dynamic> toJson() => {
-        'email': email,
-        'secret': secret,
-      };
 }
